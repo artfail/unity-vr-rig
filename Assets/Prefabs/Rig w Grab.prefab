@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 5736434588236779630}
   m_Layer: 3
   m_Name: Rig w Grab
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
