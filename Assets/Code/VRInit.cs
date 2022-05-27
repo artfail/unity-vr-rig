@@ -19,7 +19,7 @@ public class VRInit : MonoBehaviour
         if (inputDevices[0].manufacturer == "Oculus")
         {
             Unity.XR.Oculus.Performance.TrySetDisplayRefreshRate(90);
-            //Unity.XR.Oculus.Performance.TrySetDisplayRefreshRate(120);
+            Unity.XR.Oculus.Performance.TrySetDisplayRefreshRate(120);
         }
 #endif
     }
