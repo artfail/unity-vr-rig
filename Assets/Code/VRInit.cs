@@ -6,9 +6,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.XR;
+using TMPro;
 
 public class VRInit : MonoBehaviour
 {
+    public TextMeshProUGUI outText;
     private List<InputDevice> inputDevices = new List<InputDevice>();
     private List<XRInputSubsystem> subsystems = new List<XRInputSubsystem>();
 
@@ -21,6 +23,7 @@ public class VRInit : MonoBehaviour
             Unity.XR.Oculus.Performance.TrySetDisplayRefreshRate(90);
             Unity.XR.Oculus.Performance.TrySetDisplayRefreshRate(120);
         }
+        outText.text = inputDevices[0].manufacturer;
 #endif
     }
 

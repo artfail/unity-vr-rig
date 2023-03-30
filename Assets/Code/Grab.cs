@@ -14,6 +14,7 @@ public class Grab : MonoBehaviour
     private Transform hoverObject = null;
     private Transform heldObject = null;
     private Rigidbody heldRigidbody = null;
+    private Collider heldCollider = null;
 
     public XRNode handRole = XRNode.LeftHand;
     bool triggerState = false;
@@ -55,9 +56,10 @@ public class Grab : MonoBehaviour
     IEnumerator PickUpObject(Transform transform)
     {
         heldObject = transform;
-        heldObject.gameObject.layer = 7; // ignore player layer - keeps held objects from hitting the players collider
+        heldCollider = heldObject.GetComponent<Collider>();
         heldRigidbody = heldObject.GetComponent<Rigidbody>();
         heldRigidbody.isKinematic = true;
+        heldCollider.enabled = false;
 
         float t = 0;
         while (t < .4f) //snap to position when close
@@ -79,7 +81,6 @@ public class Grab : MonoBehaviour
     {
         StopAllCoroutines();
         SnapToHand();
-
         heldRigidbody.isKinematic = false;
         heldRigidbody.AddForce(transform.forward * launchForce, ForceMode.VelocityChange);
         heldObject.parent = null;
@@ -89,7 +90,7 @@ public class Grab : MonoBehaviour
     IEnumerator LetGo()
     {
         yield return new WaitForSeconds(.1f);
-        heldObject.gameObject.layer = 6; //grabbableLayer
+        heldCollider.enabled = true;
         heldObject = null;
     }
 

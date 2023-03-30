@@ -7,14 +7,11 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Default.unity
-    guid: 41855a39f23ec534dbc962618fe0f51b
-  - enabled: 1
-    path: Assets/Scenes/Grabbing.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Quest Passthrough.unity
-    guid: ae481ff829d9f734a9e16f9b2fb0524e
+    path: Assets/Scenes/Grabbing.unity
+    guid: f23528809fef4354b967cc8f5090d210
   m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: fac34b3c40d7f574da6fc445e9394267, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e4483b7f02eb9084c8dd1cc82b59fa09, type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 1711979a96045874cb0be982ff77b6f6, type: 2}
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5a55fc2a426f5804c94e0d530489cb40, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 21cee6e1469364043ab8f41619802822, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 93201e25e2ebe464784d3a534051126b, type: 2}

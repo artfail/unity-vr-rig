@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using TMPro;
 
 public class HandInput : MonoBehaviour
 {
-    public TextMesh outText;
+    public TextMeshPro outText;
     public XRNode handRole = XRNode.LeftHand;
 
     void Update()
